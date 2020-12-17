@@ -17,6 +17,14 @@ ActiveStorage.start()
 const currentPage = findCurrentPage(pages, router.controllerPath, router.actionName)
 
 window.addEventListener('DOMContentLoaded', () => {
+  const buttonInLayout = document.querySelector('.js-button-in-layout')
+
+  if (buttonInLayout) {
+    buttonInLayout.addEventListener('click', () => {
+      alert('A button in the layout!')
+    })
+  }
+
   if (currentPage) {
     const context = {
       embeddedVariables: window.embeddedVariables || {},

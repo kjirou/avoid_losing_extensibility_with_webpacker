@@ -18,5 +18,12 @@
 
   <body>
     <%= yield %>
+
+    <% # An UI parts that may be displayed depending on the user's status. %>
+    <% if rand < 0.5 %>
+      <div>
+        <button class="js-button-in-layout">A button in the layout</button>
+      </div>
+    <% end %>
   </body>
 </html>
