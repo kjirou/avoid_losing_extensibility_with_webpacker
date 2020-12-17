@@ -6,6 +6,18 @@
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import {
+  findCurrentPage,
+  pages,
+} from '../src/pages'
 
 Rails.start()
 ActiveStorage.start()
+
+const currentPage = findCurrentPage(pages, router.controllerPath, router.actionName)
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (currentPage) {
+    currentPage.handleDOMContentLoaded()
+  }
+})
