@@ -18,6 +18,9 @@ const currentPage = findCurrentPage(pages, router.controllerPath, router.actionN
 
 window.addEventListener('DOMContentLoaded', () => {
   if (currentPage) {
-    currentPage.handleDOMContentLoaded()
+    const context = {
+      embeddedVariables: window.embeddedVariables || {},
+    }
+    currentPage.handleDOMContentLoaded(context)
   }
 })
