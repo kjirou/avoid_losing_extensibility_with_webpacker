@@ -6,6 +6,7 @@
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import {Button} from '../src/layout/Button'
 import {
   findCurrentPage,
   pages,
@@ -20,9 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const buttonInLayout = document.querySelector('.js-button-in-layout')
 
   if (buttonInLayout) {
-    buttonInLayout.addEventListener('click', () => {
-      alert('A button in the layout!')
-    })
+    new Button(buttonInLayout)
   }
 
   if (currentPage) {
