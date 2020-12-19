@@ -1,5 +1,8 @@
 import $ from 'jquery'
+import {createElement} from 'react'
+import {render} from 'react-dom'
 
+import {Counter} from '../shared/Counter'
 import {add} from '../shared/calculator'
 
 const handleDOMContentLoaded = (context) => {
@@ -9,6 +12,8 @@ const handleDOMContentLoaded = (context) => {
   $('.js-greeting-button').on('click', () => {
     alert('Hi!')
   })
+  const counterDisplay = document.querySelector('.js-counter-display')
+  render(createElement(Counter), counterDisplay)
 }
 
 export default {
