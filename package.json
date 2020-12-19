@@ -2,11 +2,16 @@
   "name": "avoid-losing-extensibility-with-webpacker",
   "private": true,
   "dependencies": {
+    "@babel/preset-react": "^7.12.10",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
-    "jquery": "^3.5.1"
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "jquery": "^3.5.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "version": "0.1.0",
   "devDependencies": {
